@@ -19,3 +19,78 @@
 .nav-link:focus {
   color: #747bff;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+  align-items: center;
+  justify-content: center 
+}
+
+.search-form input{
+  width: 272px;
+  height: 35px;
+   gap: 8px;
+   border-radius: 8px;
+   border-width: 1px;
+   padding-left: 20px;
+}
+
+
+
+.search-button {
+  margin-left: 20px;
+  width: 91px;
+height: 40px;
+padding: 8px, 16px, 8px, 16px;
+gap: 10px;
+background-color: #4E75FF;
+color: white;
+border-radius: 8px ;
+border-color: #4E75FF;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.photo-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.load-more {
+    
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
