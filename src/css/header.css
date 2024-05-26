@@ -36,11 +36,21 @@ body {
   width: 272px;
   height: 35px;
    gap: 8px;
-   border-radius: 8px;
-   border-width: 1px;
+   border-radius: 6px;
+   border-width: 0.5px;
    padding-left: 20px;
 }
 
+.search-form input:hover{
+  border-width: 1px;
+}
+
+.search-form input:focus{
+  border-width: 1px;
+  border-color: #4E75FF;
+  outline: none;
+  border-width: 1px;
+}
 
 
 .search-button {
@@ -52,7 +62,12 @@ gap: 10px;
 background-color: #4E75FF;
 color: white;
 border-radius: 8px ;
-border-color: #4E75FF;
+border: none;
+}
+
+.search-button:hover{
+  background-color: #6C8CFF;
+  border-color: #6C8CFF;
 }
 
 .gallery {
@@ -93,4 +108,6 @@ border-color: #4E75FF;
     font-size: 16px;
     cursor: pointer;
 }
+
+
 

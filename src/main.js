@@ -21,7 +21,8 @@ async function onSearch(event) {
     if (query === '') {
         iziToast.warning({
             title: '',
-            message: 'Please enter a search query.'
+            message: 'Please enter a search query.',
+            position: 'topRight'
         });
         return;
     }
@@ -35,9 +36,10 @@ async function onSearch(event) {
         const data = await fetchImages(query, page);
         hideLoadingMessage();
         if (data.hits.length === 0) {
-            iziToast.warning({
+            iziToast.error({
                 title: '',
-                message: 'Sorry, there are no images matching your search query. Please try again!'
+                message: 'Sorry, there are no images matching your search query. Please try again!',
+                position: 'topRight'
             });
         } else {
             renderImages(data.hits);
@@ -50,7 +52,8 @@ async function onSearch(event) {
         console.error(error);
         iziToast.error({
             title: '',
-            message: 'Something went wrong. Please try again.'
+            message: 'Something went wrong. Please try again.',
+            position: 'topRight'
         });
     }
 }
@@ -66,7 +69,8 @@ async function onLoadMore() {
             hideLoadMoreButton();
             iziToast.warning({
                 title: '',
-                message: "We're sorry, but you've reached the end of search results."
+                message: "We're sorry, but you've reached the end of search results.",
+                position: 'topRight'
             });
         }
     } catch (error) {
@@ -74,7 +78,8 @@ async function onLoadMore() {
         console.error(error);
         iziToast.error({
             title: '',
-            message: 'Something went wrong. Please try again.'
+            message: 'Something went wrong. Please try again.',
+            position: 'topRight'
         });
     }
 }
